@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <functional>
 #include <memory>
+#include <algorithm>
 #include <pico/stdlib.h>
 #include <hardware/timer.h>
 #include <hardware/irq.h>
