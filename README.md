@@ -94,14 +94,14 @@ This version was compiled and tested only for the Pi Pico, as it is the only boa
 ### XInput Guitar Mapping
 
 | PS3 Guitar	                | Xbox 360 |
-| --- 
+| --- | --- |
 | Green Button                  | LT |
 | Red Button                    | LB |
 | Yellow Button                 | RT |
 | Blue Button                   | RB |
 | Orange Button                 | A |
-| Select Button                 | Button Power
-| Start Button                  | Start
+| Select Button                 | Button Power |
+| Start Button                  | Start |
 
 ## Known Issues
 
