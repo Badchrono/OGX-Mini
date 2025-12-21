@@ -96,7 +96,6 @@ Please visit [**this page**](https://bluepad32.readthedocs.io/en/latest/supporte
 - **XInput Guitar Driver**: Added a new XInput Guitar driver that converts an original PlayStation 3 guitar into a standard Xbox 360 controller. This enables its use on the Xbox 360, which was previously impossible without this driver.
 
 - **360 Guitar Driver (Native)**: Added a native Xbox 360 guitar driver (VID: 045E, PID: 028E) selectable via Start + Dpad Up + B. This allows the device to be recognized specifically as a guitar by the Xbox 360, enabling support for games that require authentic guitar controllers.
-
 ## Build Information:
 
 This version was compiled and tested only for the Pi Pico, as it is the only board I currently have available for testing.
