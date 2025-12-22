@@ -26,10 +26,8 @@ Start = Plus (Switch) = Options (Dualsense/DS4)
 
 - XInput
   - Start + Dpad Up
-- XInput Guitar (Original PS3 Guitar to Xbox 360 Controller)
-  - Start + Dpad Up + A
 - 360 Guitar (Native Xbox 360 Guitar) Hamonix Rock Band Guitar
-  - Start + Dpad Up + B
+  - Start + Dpad Up + A
 - Original Xbox
   - Start + Dpad Right
 - Original Xbox Steel Battalion
@@ -93,24 +91,10 @@ Please visit [**this page**](https://bluepad32.readthedocs.io/en/latest/supporte
 
 - **PlayStation 4 (DS4) Driver**: Added a new driver that emulates the authentic Sony DualShock 4 (VID: 054C, PID: 09CC). This driver is natively recognized by the PlayStation 3, providing proper analog triggers (L2/R2) and Select button functionality. Activation: Start + Dpad Left + A.
 
-- **XInput Guitar Driver**: Added a new XInput Guitar driver that converts an original PlayStation 3 guitar into a standard Xbox 360 controller. This enables its use on the Xbox 360, which was previously impossible without this driver.
-
-- **360 Guitar Driver (Native)**: Added a native Xbox 360 guitar driver (VID: 045E, PID: 028E) selectable via Start + Dpad Up + B. This allows the device to be recognized specifically as a guitar by the Xbox 360, enabling support for games that require authentic guitar controllers.
+- **360 Guitar Driver (Native)**: Added a native Xbox 360 guitar driver (VID: 045E, PID: 028E) selectable via Start + Dpad Up + A. This allows the device to be recognized specifically as a guitar by the Xbox 360, enabling support for games that require authentic guitar controllers.
 ## Build Information:
 
 This version was compiled and tested only for the Pi Pico, as it is the only board I currently have available for testing.
-
-### XInput Guitar Mapping
-
-| PS3 Guitar	                | Xbox 360 |
-| --- | --- |
-| Green Button                  | LT |
-| Red Button                    | LB |
-| Yellow Button                 | RT |
-| Blue Button                   | RB |
-| Orange Button                 | A |
-| Select Button                 | Button Power |
-| Start Button                  | Start |
 
 ## Known Issues
 

@@ -83,7 +83,21 @@ void XInputGuitar360Device::process(const uint8_t idx, Gamepad &gamepad) {
       in_report_.joystick_ly = 0; // No tilt - center position
     }
 
-    in_report_.joystick_rx = gp_in.joystick_rx; // Whammy Z-axis
+    // Whammy bar fix: Apply deadzone to filter out resting state
+    // The PS3 guitar whammy bar may send non-zero values even at rest.
+    // Xbox 360 expects whammy at rest = 0, pressed = positive values.
+    // Apply a deadzone threshold to filter noise when whammy is not pressed.
+    constexpr int16_t WHAMMY_DEADZONE = 4000; // ~12% of full range as deadzone
+    if (gp_in.joystick_rx > WHAMMY_DEADZONE) {
+      // Whammy is pressed - map to full range
+      in_report_.joystick_rx = gp_in.joystick_rx;
+    } else if (gp_in.joystick_rx < -WHAMMY_DEADZONE) {
+      // Handle negative values (inverted whammy)
+      in_report_.joystick_rx = gp_in.joystick_rx;
+    } else {
+      // Within deadzone - whammy at rest, send zero
+      in_report_.joystick_rx = 0;
+    }
     in_report_.joystick_ry = Range::invert(gp_in.joystick_ry);
 
     if (tud_suspended()) {

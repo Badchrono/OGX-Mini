@@ -8,7 +8,6 @@
 #include "USBDevice/DeviceDriver/Switch/Switch.h"
 #include "USBDevice/DeviceDriver/WebApp/WebApp.h"
 #include "USBDevice/DeviceDriver/XInput/XInput.h"
-#include "USBDevice/DeviceDriver/XInput/XInputGuitar.h"
 #include "USBDevice/DeviceDriver/XInput/XInputGuitar360.h"
 #include "USBDevice/DeviceDriver/XboxOG/XboxOG_GP.h"
 #include "USBDevice/DeviceDriver/XboxOG/XboxOG_SB.h"
@@ -48,9 +47,6 @@ void DeviceManager::initialize_driver(DeviceDriverType driver_type,
     break;
   case DeviceDriverType::XINPUT_GUITAR_360:
     device_driver_ = std::make_unique<XInputGuitar360Device>();
-    break;
-  case DeviceDriverType::XINPUT_GUITAR:
-    device_driver_ = std::make_unique<XInputGuitarDevice>();
     break;
   case DeviceDriverType::XBOXOG:
     has_analog = true;

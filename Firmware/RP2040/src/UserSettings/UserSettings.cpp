@@ -21,10 +21,8 @@ static constexpr uint32_t DINPUT = BUTTON_COMBO(
     Gamepad::BUTTON_START | Gamepad::BUTTON_RB, Gamepad::DPAD_LEFT);
 static constexpr uint32_t XINPUT =
     BUTTON_COMBO(Gamepad::BUTTON_START, Gamepad::DPAD_UP);
-static constexpr uint32_t XINPUT_GUITAR =
-    BUTTON_COMBO(Gamepad::BUTTON_START | Gamepad::BUTTON_A, Gamepad::DPAD_UP);
 static constexpr uint32_t XINPUT_GUITAR_360 =
-    BUTTON_COMBO(Gamepad::BUTTON_START | Gamepad::BUTTON_B, Gamepad::DPAD_UP);
+    BUTTON_COMBO(Gamepad::BUTTON_START | Gamepad::BUTTON_A, Gamepad::DPAD_UP);
 static constexpr uint32_t SWITCH =
     BUTTON_COMBO(Gamepad::BUTTON_START, Gamepad::DPAD_DOWN);
 static constexpr uint32_t XBOXOG =
@@ -44,7 +42,6 @@ static constexpr uint32_t WEBAPP = BUTTON_COMBO(
 static constexpr DeviceDriverType VALID_DRIVER_TYPES[] = {
 #if defined(CONFIG_EN_4CH)
     DeviceDriverType::XINPUT_GUITAR_360,
-    DeviceDriverType::XINPUT_GUITAR,
     DeviceDriverType::XINPUT,
     DeviceDriverType::PS3,
     DeviceDriverType::DS4,
@@ -60,7 +57,6 @@ static constexpr DeviceDriverType VALID_DRIVER_TYPES[] = {
 #endif
 #else // MAX_GAMEPADS == 1
     DeviceDriverType::XINPUT_GUITAR_360,
-    DeviceDriverType::XINPUT_GUITAR,
     DeviceDriverType::XINPUT,
     DeviceDriverType::PS3,
     DeviceDriverType::DS4,
@@ -82,14 +78,13 @@ struct ComboMap {
   DeviceDriverType driver;
 };
 
-static constexpr std::array<ComboMap, 12> BUTTON_COMBO_MAP = {
+static constexpr std::array<ComboMap, 11> BUTTON_COMBO_MAP = {
     {{ButtonCombo::XBOXOG, DeviceDriverType::XBOXOG},
      {ButtonCombo::XBOXOG_SB, DeviceDriverType::XBOXOG_SB},
      {ButtonCombo::XBOXOG_XR, DeviceDriverType::XBOXOG_XR},
      {ButtonCombo::WEBAPP, DeviceDriverType::WEBAPP},
      {ButtonCombo::DINPUT, DeviceDriverType::DINPUT},
      {ButtonCombo::SWITCH, DeviceDriverType::SWITCH},
-     {ButtonCombo::XINPUT_GUITAR, DeviceDriverType::XINPUT_GUITAR},
      {ButtonCombo::XINPUT_GUITAR_360, DeviceDriverType::XINPUT_GUITAR_360},
      {ButtonCombo::XINPUT, DeviceDriverType::XINPUT},
      {ButtonCombo::PS3, DeviceDriverType::PS3},
