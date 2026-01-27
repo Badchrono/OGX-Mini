@@ -66,6 +66,7 @@ set(SOURCES_BOARD
     ${SRC}/USBDevice/DeviceDriver/DS4/DS4.cpp
     ${SRC}/USBDevice/DeviceDriver/Switch/Switch.cpp
     ${SRC}/USBDevice/DeviceDriver/XInput/XInput.cpp
+    ${SRC}/USBDevice/DeviceDriver/XInput/XboxOne.cpp
     ${SRC}/USBDevice/DeviceDriver/XInput/XInputGuitar360.cpp
     ${SRC}/USBDevice/DeviceDriver/XboxOG/XboxOG_GP.cpp
     ${SRC}/USBDevice/DeviceDriver/XboxOG/XboxOG_SB.cpp

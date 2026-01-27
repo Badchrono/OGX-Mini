@@ -1,6 +1,6 @@
 # OGX-Mini
 
-v1.1.0
+v1.1.1
 
 ![alt text](images/OGX-Mini-github.jpg)
 
@@ -81,6 +81,16 @@ Note: There are some third party controllers that can change their VID/PID, thes
 
 Please visit [**this page**](https://bluepad32.readthedocs.io/en/latest/supported_gamepads/) for a more comprehensive list of supported controllers and Bluetooth pairing instructions.
 
+## Features new to v1.1.1 (by Fred)
+
+### DS4 Driver Compatibility:
+- **Nintendo Wii Support**: The new DS4 driver allows using the project on Nintendo Wii with FakeMote enabled. It may also work on OPL (Open PS2 Loader), but this has not been tested as I do not have a PS2 available.
+
+### Xbox One Driver:
+- **Under Development**: The Xbox One driver is currently being implemented and will continue to be developed in future updates.
+
+---
+
 ## Features new to v1.1.0 (by Fred)
 
 ### PS3 Driver Fixes:
@@ -94,7 +104,7 @@ Please visit [**this page**](https://bluepad32.readthedocs.io/en/latest/supporte
 - **360 Guitar Driver (Native)**: Added a native Xbox 360 guitar driver (VID: 045E, PID: 028E) selectable via Start + Dpad Up + A. This allows the device to be recognized specifically as a guitar by the Xbox 360, enabling support for games that require authentic guitar controllers.
 ## Build Information:
 
-This version was compiled and tested only for the Pi Pico, as it is the only board I currently have available for testing.
+This version (v1.1.1) was compiled and tested only for **Pi Pico** and **Pi Pico 2 W**, as these are the only boards I currently have available for testing.
 
 ## Known Issues
 

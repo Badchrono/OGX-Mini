@@ -21,6 +21,7 @@
 #include "USBHost/HostDriver/PSClassic/PSClassic.h"
 #include "USBHost/HostDriver/SwitchPro/SwitchPro.h"
 #include "USBHost/HostDriver/SwitchWired/SwitchWired.h"
+
 #include "USBHost/HostDriver/XInput/Xbox360.h"
 #include "USBHost/HostDriver/XInput/Xbox360W.h"
 #include "USBHost/HostDriver/XInput/XboxOG.h"
@@ -80,7 +81,8 @@ public:
       interface.driver = std::make_unique<PS4Host>(gp_idx);
       break;
     case HostDriverType::PS3:
-      // PS2->PS3 Adapters mimic PS3 VID/PID but have different report descriptor length (176 vs 148)
+      // PS2->PS3 Adapters mimic PS3 VID/PID but have different report
+      // descriptor length (176 vs 148)
       if (desc_len == 176) {
         interface.driver = std::make_unique<HIDHost>(gp_idx);
       } else if (use_ps3_v2) {
@@ -120,6 +122,7 @@ public:
                                    // when mounted
       interface.driver = std::make_unique<Xbox360WHost>(gp_idx);
       break;
+
     default:
       if (is_hid_gamepad(report_desc, desc_len)) {
         interface.driver = std::make_unique<HIDHost>(gp_idx);

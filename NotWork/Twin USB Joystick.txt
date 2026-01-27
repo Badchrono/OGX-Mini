@@ -1,0 +1,16 @@
+Implementação do Suporte ao Twin USB Joystick (REVERTIDO)
+Tentativa de adicionar suporte para o adaptador "Twin USB Joystick" (PS2 para USB).
+
+STATUS: REVERTIDO A PEDIDO DO USUÁRIO Após múltiplas tentativas sem sucesso na montagem do driver (mesmo com forçamento de VID/PID e parsers manuais), o suporte foi removido completamente do projeto para evitar código morto ou instabilidade.
+
+Histórico da Tentativa
+Criação do Driver TwinUSBHost: Implementado com vibração desativada.
+Identificação: Adicionados VIDs 0x0810/0x0001.
+Workarounds Tentados:
+Scanning de assinatura HID em HostManager.
+
+Forçamento de tipo de driver em tuh_callbacks.
+Parser manual de fallback (Hardcoded) em TwinUSB.cpp.
+Nenhuma das abordagens resultou na montagem bem-sucedida do driver pelo stack USB TinyUSB. O dispositivo parece ter quirks de enumeração ou timing que impedem a comunicação inicial neste host específico.
+
+O código foi restaurado ao estado anterior a estas tentativas.

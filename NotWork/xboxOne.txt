@@ -1,0 +1,17 @@
+Wireshark + USBPcap
+Vantagens:
+
+✅ Captura TODO o tráfego - incluindo o handshake inicial que precisamos
+✅ Passivo - não interfere na comunicação normal
+✅ Vê exatamente o que o driver Windows envia e recebe
+✅ Formato padrão (pcap) - fácil de analisar
+É o que precisamos porque queremos ver:
+
+O que a Brook envia quando conecta (Announce packet)
+O que o Windows responde
+A troca completa até o dispositivo estar "funcionando"
+
+Minha Recomendação
+Wireshark + USBPcap é a melhor opção para nosso caso.
+
+Quer que eu te dê instruções passo-a-passo para instalar e usar o USBPcap/Wireshark para capturar o tráfego da Brook?

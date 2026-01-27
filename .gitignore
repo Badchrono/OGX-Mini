@@ -1,5 +1,13 @@
 Firmware/.vscode
 Firmware/RP2040/build
+
+Firmware/RP2040/Firmware/RP2040/.cache/
+Firmware/RP2040/Firmware/RP2040/.vscode/
+Firmware/RP2040/Firmware/RP2040/build/
+Firmware/RP2040/Firmware/RP2040/build_pico/
+Firmware/RP2040/Firmware/RP2040/build_pico2w/
+Firmware/RP2040/Firmware/RP2040/cmake/
+
 Firmware/RP2040/.ignore
 Firmware/RP2040/src/USBDevice/DeviceDriver/XboxOG/tud_xid/tud_xid_xremote_rom.h
 Firmware/RP2040/src/BLEServer/att_delayed_response.h

@@ -39,6 +39,9 @@ static constexpr uint32_t DS4 =
     BUTTON_COMBO(Gamepad::BUTTON_START | Gamepad::BUTTON_A, Gamepad::DPAD_LEFT);
 static constexpr uint32_t WEBAPP = BUTTON_COMBO(
     Gamepad::BUTTON_START | Gamepad::BUTTON_LB | Gamepad::BUTTON_RB);
+
+static constexpr uint32_t XBOXONE =
+    BUTTON_COMBO(Gamepad::BUTTON_START | Gamepad::BUTTON_Y, Gamepad::DPAD_UP);
 }; // namespace ButtonCombo
 
 static constexpr DeviceDriverType VALID_DRIVER_TYPES[] = {
@@ -53,6 +56,7 @@ static constexpr DeviceDriverType VALID_DRIVER_TYPES[] = {
     DeviceDriverType::WEBAPP,
     DeviceDriverType::XBOXOG,
     DeviceDriverType::XBOXOG_SB,
+    DeviceDriverType::XBOXONE,
     DeviceDriverType::XBOXOG_XR,
     DeviceDriverType::DINPUT,
     DeviceDriverType::SWITCH,
@@ -70,6 +74,7 @@ static constexpr DeviceDriverType VALID_DRIVER_TYPES[] = {
     DeviceDriverType::WEBAPP,
     DeviceDriverType::XBOXOG,
     DeviceDriverType::XBOXOG_SB,
+    DeviceDriverType::XBOXONE,
     DeviceDriverType::XBOXOG_XR,
     DeviceDriverType::DINPUT,
     DeviceDriverType::SWITCH,
@@ -84,8 +89,9 @@ struct ComboMap {
   DeviceDriverType driver;
 };
 
-static constexpr std::array<ComboMap, 11> BUTTON_COMBO_MAP = {
+static constexpr std::array<ComboMap, 12> BUTTON_COMBO_MAP = {
     {{ButtonCombo::XBOXOG, DeviceDriverType::XBOXOG},
+     {ButtonCombo::XBOXONE, DeviceDriverType::XBOXONE},
      {ButtonCombo::XBOXOG_SB, DeviceDriverType::XBOXOG_SB},
      {ButtonCombo::XBOXOG_XR, DeviceDriverType::XBOXOG_XR},
      {ButtonCombo::WEBAPP, DeviceDriverType::WEBAPP},

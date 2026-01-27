@@ -9,6 +9,7 @@
 #include "USBDevice/DeviceDriver/Switch/Switch.h"
 #include "USBDevice/DeviceDriver/WebApp/WebApp.h"
 #include "USBDevice/DeviceDriver/XInput/XInput.h"
+#include "USBDevice/DeviceDriver/XInput/XboxOne.h"
 
 #include "USBDevice/DeviceDriver/XInput/XInputGuitar360.h"
 #include "USBDevice/DeviceDriver/XboxOG/XboxOG_GP.h"
@@ -58,6 +59,9 @@ void DeviceManager::initialize_driver(DeviceDriverType driver_type,
     break;
   case DeviceDriverType::XBOXOG_SB:
     device_driver_ = std::make_unique<XboxOGSBDevice>();
+    break;
+  case DeviceDriverType::XBOXONE:
+    device_driver_ = std::make_unique<XboxOneDevice>();
     break;
   case DeviceDriverType::XBOXOG_XR:
     device_driver_ = std::make_unique<XboxOGXRDevice>();
